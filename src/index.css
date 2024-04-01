@@ -1,68 +1,144 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.pop{
+  font-family: "Poppins", sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.rub{
+  font-family: "Rubik Scribble", system-ui;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.mar{
+  font-family: "Markazi Text", serif
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.animation{
+  animation: move 10s linear infinite;
+}
+.animation2{
+  animation: joss 10s linear infinite;
+}
+ 
+.rotet{
+  position: absolute;
+  animation: moveing ease-in; 
+  animation-duration: 2s;
+}
+.rotet2{
+  position: absolute;
+  animation: moveing ease-in ; 
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+.rotet3{
+  position: absolute;
+  animation:moveing ease-in ;
+  animation-duration: 2s;
+  animation-delay: 4s; 
+}
+.rotet4{
+  position: absolute;
+  animation:10s moveing ease-in ; 
+  animation-duration: 2s;
+  animation-delay: 6s; 
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+@keyframes moveing{
+ to{
+  transform: rotate(0deg);
+ }from{
+  transform: rotate(360deg);
+ }
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+ 
+@keyframes joss{
+  0%{  
+   
+    bottom: 10%;
+    opacity: 1;
   }
-  a:hover {
-    color: #747bff;
+  20%{
+     left:20%;
+    bottom: 20%;
   }
-  button {
-    background-color: #f9f9f9;
+  30%{
+    left: 30%;
+    bottom:30%;
+  }
+  40%{
+    left: 40%;
+    bottom: 40%;
+  }
+  50%{
+ left:50%;
+ bottom:50%
+
+  }
+  60%{
+   left: 70%;
+   bottom: 70%;
+  }
+  70%{
+  left: 75%;
+  bottom:75%
+  }
+  80%{
+    left:80%;
+    bottom:80%
+  }
+  90%{
+    left:90%;
+    bottom:90%
+  }
+  100%{   
+    bottom:95%;
+    left: 95%;
+    opacity: 0;
   }
 }
+@keyframes move{
+    0%{
+      top:0%;
+     
+      opacity: 1;
+    }
+    20%{
+    
+      left: 20%;
+    
+    }
+    30%{
+      left:30%;
+    
+
+    }
+    40%{
+      top:40%;
+   
+
+    }
+    50%{
+      top:50%;
+
+    }
+    60%{
+      top:60%;
+    }
+    70%{
+      top:70%;  
+    }
+    80%{
+      top:80%;
+    }
+    90%{
+      top:90%;
+
+    }
+    100%{
+      top:95%;
+      left:95%;
+    }
+  }
