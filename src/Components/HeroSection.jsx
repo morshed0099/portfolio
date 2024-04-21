@@ -3,11 +3,12 @@ import Morshed from "../assets/Morshed.jpg";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import SkillSection from "./SkillSection";
 import Service from "./Service";
+import Projects from "./Projects";
 const HeroSection = () => {
   const [open, setOpen] = useState(false);
   console.log(open);
   return (
-    <div className="">
+    <div className=" bg-primary">
       <div className="z-[50] sticky top-0">
         <div className="absolute top-10 right-12 z-[50]">
           <div
@@ -21,7 +22,7 @@ const HeroSection = () => {
             ></div>
             <div
               className={`px-6 z-30 py-[2px] duration700  ease-linear  bg-white ${
-                open ? "moveDiv absolute"  : ""
+                open ? "moveDiv absolute" : ""
               }`}
             ></div>
             <div
@@ -202,7 +203,12 @@ const HeroSection = () => {
         </div>
       </div>
       <SkillSection />
-      <Service />
+      <div className="2x:px-[200px] relative xl:px-[100px]  lg:px-[60px] lg:py-[80px] lg:pb-[100px] pb-6  px-4 mx-auto">
+        <Service />
+      </div>
+      <div className="bg-[#1e293b]">
+        <Projects />
+      </div>
     </div>
   );
 };

@@ -221,3 +221,21 @@
     z-index: -1;
  }
 }
+.angel{
+  z-index: -1;
+}
+.over-lay{
+
+}
+
+.card-project:hover{ 
+  .over-lay{
+    top: 0;
+    color: white;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+ 
+}
