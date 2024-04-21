@@ -2,7 +2,7 @@ import HeroSection from "../src/Components/HeroSection";
 
 const App = () => {
   return (
-    <div>
+    <div className="relative">
       <HeroSection />
     </div>
   );

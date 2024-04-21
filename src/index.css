@@ -15,6 +15,25 @@
   font-family: "Markazi Text", serif
 }
 
+.card-skill:hover {
+ .info-skill{
+ display: block;
+ width: 300px;
+ z-index: 1000;
+ }
+}
+.moveDiv{
+  animation: divMove 3s ease forwards;
+}
+@keyframes divMove{
+  to{
+    position: absolute;
+    left: -2400px;
+  }from{
+    left: 0;
+  }
+}
+
 .animation{
   animation: move 10s linear infinite;
 }
@@ -44,6 +63,55 @@
   animation:10s moveing ease-in ; 
   animation-duration: 2s;
   animation-delay: 6s; 
+}
+
+.htmlAnimation{
+  animation: moveHtml 20s ease-in infinite;
+}
+.cssAnimation{
+  animation: moveCss 20s ease-in infinite;
+}
+.jsAnimation{
+ animation:updown 3s ease infinite 
+}
+@keyframes updown{
+  0%{
+    right:50%;
+    top:30% ;   
+  
+  }40%{
+    top: 28%;
+
+  }80%{    
+    top: 30%;
+  }100%{
+    right:50%;
+    top:30% ; 
+  }
+}
+@keyframes moveCss{
+  to{
+    top: 0;
+    right: 5%;
+    opacity: 1;
+  }
+  from{
+    top: 60%;
+    right: 5%;
+    opacity: 0;
+  }
+}
+@keyframes moveHtml{
+  to{
+    bottom: 0;
+    left: 5%;
+    opacity: 1;
+  }
+  from{
+    bottom: 60%;
+    left: 5%;
+    opacity: 0;
+  }
 }
 
 @keyframes moveing{
@@ -142,3 +210,14 @@
       left:95%;
     }
   }
+  .card{
+    z-index: 1;
+  }
+.card:hover{
+ .angel{    
+    transform: rotate(0deg);
+    width: 120% ;
+    height: 120%;
+    z-index: -1;
+ }
+}
